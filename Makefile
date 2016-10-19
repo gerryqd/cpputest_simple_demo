@@ -1,7 +1,7 @@
 CPPUTEST_HOME = ~/work/cpputest
 
 CPPFLAGS += -I $(CPPUTEST_HOME)/include
-LDLIBS   += $(CPPUTEST_HOME)/lib/libCppUTest.a $(CPPUTEST_HOME)/lib/libCppUTestExt.a
+LDLIBS   += -L $(CPPUTEST_HOME)/lib -lCppUTest -lCppUTestExt
 LDFLAGS  += -lstdc++ -lm
 
 all: TestFirst
