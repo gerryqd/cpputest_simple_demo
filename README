@@ -1,0 +1,20 @@
+README
+======
+
+Just follows below document,
+
+    ttps://www.odd-e.com/material/2009/JAOO_TDD_C_Tutorial/TDD_in_C_JAOO_tutorial.pdf
+
+Some change points are,
+----------------------
+
+1. The original code cannot be built successfully on my machine.
+  (debian8, GCC v4.9)
+
+  Seems that `$(LDFALGS)` is not used at all. After searching on the internet, and found the solution.
+
+  a. put lib used (not in `-l` or '-L` sytle) to `$(LDLIBS)`
+  b. remove such kind of libs from `$(LDFLAGS)`
+
+2. Modern CppUTest seems requires the math library, so, `-lm` is added to `$(LDFLAGS)`.
+
