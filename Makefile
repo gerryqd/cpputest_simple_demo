@@ -10,4 +10,4 @@ all: TestFirst
 TestFirst: TestFirst.o Main.o
 
 clean:
-	rm TestFirst TestFirst.o Main.o
+	rm -f TestFirst TestFirst.o Main.o
