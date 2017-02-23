@@ -5,7 +5,7 @@ LDFLAGS  += -L $(CPPUTEST_HOME)/lib
 LDLIBS   += -lCppUTest -lCppUTestExt -lstdc++ -lm
 
 all: TestFirst
-	./TestFirst
+	./TestFirst -c
 
 TestFirst: TestFirst.o Main.o
 
