@@ -4,10 +4,15 @@ CPPFLAGS += -I $(CPPUTEST_HOME)/include
 LDFLAGS  += -L $(CPPUTEST_HOME)/lib 
 LDLIBS   += -lCppUTest -lCppUTestExt -lstdc++
 
-all: TestFirst
-	./TestFirst -c
+APP_NAME = TestFirst
 
-TestFirst: TestFirst.o Main.o
+OBJS = TestFirst.o \
+	   Main.o
+
+all: $(APP_NAME)
+	./$(APP_NAME) -c
+
+TestFirst: $(OBJS)
 
 clean:
-	rm -f TestFirst *.o
+	rm -f $(APP_NAME) $(OBJS)
