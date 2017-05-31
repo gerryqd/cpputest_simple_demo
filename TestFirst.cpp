@@ -1,15 +1,17 @@
 #include "CppUTest/TestHarness.h"
 
-TEST_GROUP(FirstTest)
+TEST_GROUP(FirstTestGroup)
 {
 };
 
-TEST(FirstTest, First)
+TEST(FirstTestGroup, FirstTest)
 {
-    CHECK_EQUAL(0, 0);
+   FAIL("Fail me!");
 }
 
-TEST(FirstTest, second)
+IGNORE_TEST(FirstTestGroup, SecondTest)
 {
-    LONGS_EQUAL(0, 0);
+   STRCMP_EQUAL("hello", "world");
+   LONGS_EQUAL(1, 2);
+   CHECK(false);
 }

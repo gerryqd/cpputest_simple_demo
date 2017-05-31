@@ -12,7 +12,7 @@ OBJS = TestFirst.o \
 all: $(APP_NAME)
 	./$(APP_NAME) -c
 
-TestFirst: $(OBJS)
+$(APP_NAME): $(OBJS)
 
 clean:
 	rm -f $(APP_NAME) $(OBJS)
